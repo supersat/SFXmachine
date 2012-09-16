@@ -10503,7 +10503,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="U$1" library="sfxboard" deviceset="TERMBLOCK4POS" device=""/>
 <part name="J2" library="SparkFun-Connectors" deviceset="POWER_JACK" device="PTH"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="U$2" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="L"/>
+<part name="U$2" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
 </parts>
 <sheets>
 <sheet>
