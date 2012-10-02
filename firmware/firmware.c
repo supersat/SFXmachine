@@ -96,7 +96,7 @@ int main(void)
 					}
 				}
 			}
-			else if ((ReceivedMIDIEvent.Event == MIDI_EVENT(0, 0xb0)) && (ReceivedMIDIEvent.Data1 == 0x80)) {
+			else if ((ReceivedMIDIEvent.Event == MIDI_EVENT(0, 0xb0)) && (ReceivedMIDIEvent.Data1 == 0xb0)) {
 				// PWM change (Control)
 				if (ReceivedMIDIEvent.Data2 == 20) {
 					OCR1A = ReceivedMIDIEvent.Data3 << 1;
