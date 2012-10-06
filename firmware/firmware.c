@@ -96,6 +96,7 @@ int main(void)
 					}
 				}
 			}
+			/*
 			else if ((ReceivedMIDIEvent.Event == MIDI_EVENT(0, 0xb0)) && (ReceivedMIDIEvent.Data1 == 0xb0)) {
 				// PWM change (Control)
 				if (ReceivedMIDIEvent.Data2 == 20) {
@@ -115,7 +116,8 @@ int main(void)
 							OCR1C = ReceivedMIDIEvent.Data3 << 1;
 					}					
 				}
-			}			
+			}
+			*/			
 		}
 
 		MIDI_Device_USBTask(&Keyboard_MIDI_Interface);
@@ -127,6 +129,8 @@ int main(void)
 /** Configures the board hardware and chip peripherals for the demo's functionality. */
 void SetupHardware(void)
 {	
+	clock_prescale_set(clock_div_1);
+	
 	PORTB = 0;
 	PORTC = 0;
 	DDRB |= _BV(7);
