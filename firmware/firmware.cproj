@@ -142,9 +142,6 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Config\AppConfig.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="Config\LUFAConfig.h">
       <SubType>compile</SubType>
     </Compile>
