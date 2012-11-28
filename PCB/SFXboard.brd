@@ -45,7 +45,7 @@
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -108,12 +108,13 @@
 <wire x1="33.96" y1="33.01" x2="0" y2="33.01" width="0" layer="20"/>
 <wire x1="0" y1="33.01" x2="0" y2="0" width="0" layer="20"/>
 <text x="5.842" y="17.399" size="1.778" layer="21" rot="R90">SFXmachine</text>
-<text x="32.004" y="7.366" size="1.016" layer="22" rot="MR0">Rev 2012-11-27.1</text>
+<text x="32.004" y="7.366" size="1.016" layer="22" rot="MR0">Rev 2012-11-27.2</text>
 <text x="32.004" y="5.969" size="1.016" layer="22" rot="MR0">supersat@cs.uw.edu</text>
 <rectangle x1="13.97" y1="2.54" x2="16.51" y2="5.08" layer="16"/>
 <hole x="23.495" y="29.21" drill="0.6"/>
 <hole x="3.048" y="1.524" drill="0.6"/>
 <text x="16.256" y="10.668" size="1.778" layer="22" rot="MR180">SFXmachine</text>
+<text x="15.748" y="22.86" size="0.8128" layer="26" rot="MR0">Bootloader Enable</text>
 </plain>
 <libraries>
 <library name="SparkFun-DigitalIC">
@@ -1788,7 +1789,7 @@ Please make sure your boards conform to these design rules.</description>
 <param name="mlMaxStopFrame" value="4mil"/>
 <param name="mlMinCreamFrame" value="2mil"/>
 <param name="mlMaxCreamFrame" value="2mil"/>
-<param name="mlViaStopLimit" value="0mil"/>
+<param name="mlViaStopLimit" value="25mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -1916,8 +1917,8 @@ Please make sure your boards conform to these design rules.</description>
 <element name="Q1" library="special" package="QS" value="16MHz" x="14.859" y="30.226" smashed="yes" rot="R180">
 <attribute name="NAME" x="14.859" y="31.496" size="0.8128" layer="25" ratio="10" rot="R180"/>
 </element>
-<element name="C2" library="resistor" package="C0603" value="15pF" x="20.447" y="30.226" smashed="yes" rot="R270">
-<attribute name="NAME" x="21.717" y="30.734" size="0.8128" layer="25" rot="R270"/>
+<element name="C2" library="resistor" package="C0603" value="15pF" x="21.844" y="30.226" smashed="yes" rot="R270">
+<attribute name="NAME" x="23.114" y="30.734" size="0.8128" layer="25" rot="R270"/>
 </element>
 <element name="C3" library="resistor" package="C0603" value="15pF" x="8.001" y="30.226" smashed="yes" rot="R270">
 <attribute name="NAME" x="6.096" y="31.115" size="0.8128" layer="25" rot="R270"/>
@@ -1954,7 +1955,9 @@ Please make sure your boards conform to these design rules.</description>
 <element name="C5" library="resistor" package="C0805" value="22uF" x="13.97" y="10.287" smashed="yes" rot="R90">
 <attribute name="NAME" x="12.954" y="9.398" size="0.8128" layer="25" rot="R90"/>
 </element>
-<element name="SJ1" library="jumper" package="SJ" value="" x="10.795" y="24.765" rot="MR180"/>
+<element name="SJ1" library="jumper" package="SJ" value="" x="10.795" y="24.765" smashed="yes" rot="MR180">
+<attribute name="VALUE" x="11.1951" y="24.765" size="0.02" layer="28" rot="MR180"/>
+</element>
 <element name="C6" library="resistor" package="C0402" value="0.1uF" x="15.748" y="26.67" smashed="yes">
 <attribute name="NAME" x="14.986" y="28.448" size="0.8128" layer="25"/>
 </element>
@@ -2030,8 +2033,8 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="N$3">
 <contactref element="X1" pad="D+"/>
 <contactref element="R1" pad="1"/>
-<wire x1="26.71" y1="26.67" x2="23.622" y2="26.67" width="0.4064" layer="1"/>
-<wire x1="23.622" y1="26.67" x2="21.209" y2="23.876" width="0.4064" layer="1"/>
+<wire x1="26.71" y1="26.67" x2="22.352" y2="26.67" width="0.4064" layer="1"/>
+<wire x1="22.352" y1="26.67" x2="21.209" y2="23.876" width="0.4064" layer="1"/>
 <wire x1="21.209" y1="23.876" x2="21.424" y2="23.876" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$4">
@@ -2065,9 +2068,9 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U1" pad="1"/>
 <contactref element="Q1" pad="1"/>
 <contactref element="C2" pad="1"/>
-<wire x1="17.399" y1="31.496" x2="19.939" y2="31.496" width="0.254" layer="1"/>
+<wire x1="17.399" y1="31.496" x2="21.844" y2="31.496" width="0.254" layer="1"/>
 <wire x1="17.399" y1="30.226" x2="17.399" y2="31.496" width="0.254" layer="1"/>
-<wire x1="19.939" y1="31.496" x2="20.447" y2="31.076" width="0.254" layer="1"/>
+<wire x1="21.844" y1="31.496" x2="21.844" y2="31.076" width="0.254" layer="1"/>
 <wire x1="13.849" y1="27.946" x2="13.849" y2="26.8986" width="0.254" layer="1"/>
 <wire x1="13.849" y1="27.946" x2="13.849" y2="29.458" width="0.3048" layer="1"/>
 <wire x1="13.849" y1="29.458" x2="13.843" y2="29.464" width="0.3048" layer="1"/>
